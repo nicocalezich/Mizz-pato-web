@@ -6,7 +6,7 @@
                 <h1 id="section-1-title">DJ Mizz Pato</h1>
                 <p id="section-1-description">Dropping Sick Beats</p>
                 <div id="section-1-link-mixcloud">
-                    <a href='https://www.mixcloud.com/mizzpato/' target="_blank" >Listen now on MixCloud </a>
+                    <a :href="mixcloudLink" target="_blank" >Listen now on MixCloud </a>
                 </div>
                 <div id="section-1-link-socialmedia">
                     <a :href="facebookLink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -50,7 +50,8 @@
       return {
           facebookLink: 'https://www.facebook.com/MizzPato-2121512854840075/',
           instagramLink: 'https://www.instagram.com/mizzpato/',
-          twitterLink: 'https://twitter.com/_MizzPato'
+          twitterLink: 'https://twitter.com/_MizzPato',
+          mixcloudLink: 'https://www.mixcloud.com/mizzpato/'
       }
     },
     methods: {
