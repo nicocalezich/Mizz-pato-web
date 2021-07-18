@@ -1,31 +1,38 @@
 <template>
+  <section>
 
-   <section id="section-1">
+   <section class="section-1">
       <Carousel3d>
         <Slide :index="0">
-          <img src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
         </Slide>
         <Slide :index="1">
-          <img src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
         </Slide>
         <Slide :index="2">
-          <img src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
         </Slide>
-      </Carousel3d>
-
-      <Carousel3d>
+        <Slide :index="3">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+        </Slide>
+        <Slide :index="4">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+        </Slide>
+        <Slide :index="5">
+          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
+        </Slide>
         <Slide v-for="(slide,i) in slides" :index="i" :key="i">
           <template slot-scope="{index, isCurrent, leftIndex, rightIndex}">
-            <img :data-index="index" :class="{current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >=0) }" :src="slide.src">
+            <img class="carousel-img" :data-index="index" :class="{current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >=0) }" :src="slide.src">
           </template>
         </Slide>
       </Carousel3d>
+ </section>
 
+ <section class="section-2">
 
-
-     <!--
         <div class="row">
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"></div>
+            <div @click="getFullscreen()" class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img id="1" src="../assets/photo-1571397133301-3f838ea96f56.jpg"></div>
             <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
             <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
             <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
@@ -48,9 +55,9 @@
             <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
             <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
         </div>
-        -->
     </section>
 
+  </section>
 </template>
 
 <script lang="js">
@@ -73,6 +80,18 @@ import  {Carousel3d, Slide} from 'vue-carousel-3d'
       }
     },
     methods: {
+      getFullscreen(){
+        let element = document.getElementById("1")
+        if(element.requestFullscreen) {
+            element.requestFullscreen();
+          } else if(element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+          } else if(element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+          } else if(element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+          }
+}
 
     },
     computed: {
@@ -84,21 +103,32 @@ import  {Carousel3d, Slide} from 'vue-carousel-3d'
 </script>
 
 <style scoped lang="css">
-  #section-1{
+  .section-1{
     padding: 10px;
     text-align: center;
   }
 
-   img{
-        margin-top: 50px;
-        max-width:100%;
-        width:auto;
-        height: 250px;
-        border-radius: 7px;
-        cursor:pointer;
-    }
+  .section-2{
+    padding: 10px;
+    text-align: center;
+  }
 
-    img:hover{
+  .carousel-img{
+    width: 360px;
+    height: 270px;
+    cursor:pointer;
+  }
+
+  .section-2 img{
+    margin-top: 50px;
+    max-width:100%;
+    width:auto;
+    height: 250px;
+    border-radius: 7px;
+    cursor:pointer;
+  }
+
+  img:hover{
       box-shadow: 10px 0px 15px rgba(0,0,0,.6);
     }
 </style>
