@@ -141,20 +141,33 @@ section{
     background-size: cover;
 }
 
+    /* --- RESPONSIVE --- */
+    @media screen and (max-width: 1200px){
+     .title{
+    margin: 150px 80px 0 80px;
+        }
+    }
 
-
-    /* --- MINI --- */
-    @media screen and (max-width: 1600px){
-     
-
+    @media screen and (max-width: 1080px){
+     .title{
+    margin: 150px 50px 0 50px;
+        }
     }
 
     @media screen and (max-width: 858px){
-
         .title{
-          margin: 125px 50px 0 50px;
+          margin: 125px 20px 0 20px;
       }
     }
+
+     @media screen and (max-width: 760px){
+        .section-col-1{
+            background-image: url("../assets/home1copia.png");         
+            background-size: cover;
+        }
+    }
+
+
 
     /* --- END SECTION 1 ---*/
 
