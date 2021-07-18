@@ -4,7 +4,7 @@
         <div class="col-md-6 section-col-1">
             <h1 class="title">DJ Mizz Pato</h1>
             <p class="description">Dropping Sick Beats</p>
-            <a class="mixcloud" :href="mixcloudLink" target="_blank" >Listen now on MixCloud</a>
+            <a class="mixcloud" :href="mixcloudLink" target="_blank">Listen now on MixCloud</a>
             <div class="media-container">
                 <a :href="facebookLink" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -86,14 +86,14 @@ section{
 .section-1{
     height: 700px;
     background-color: #F7F7F7;   
-    background-image: url("../assets/home1.png");         
-    background-size: cover;
+    /*box-shadow: 10px 0px 15px rgba(0,0,0,.6);*/
+     background-image: url("../assets/home1.png") !important;   
 }
 
 .section-col-1{
     height: 100%;  
-    box-shadow: 10px 0px 15px rgba(0,0,0,.6);
     text-align: center;
+   
 }
 
 .title{
@@ -135,6 +135,13 @@ section{
     padding: 7px;
     font-size: 20px;
 }
+
+.section-col-2{
+    background-image: url("../assets/Patobig.png");         
+    background-size: cover;
+}
+
+
 
     /* --- MINI --- */
     @media screen and (max-width: 1600px){
