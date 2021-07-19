@@ -1,6 +1,6 @@
 <template>
   <section>
-
+<!--
    <section class="section-1">
       <Carousel3d>
         <Slide :index="0">
@@ -28,60 +28,42 @@
         </Slide>
       </Carousel3d>
  </section>
+ -->
 
  <section class="section-2">
-
-        <div class="row">
-            <div @click="getFullscreen()" class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img id="1" src="../assets/photo-1571397133301-3f838ea96f56.jpg"></div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img src="../assets/photo-1571397133301-3f838ea96f56.jpg"> </div>
-        </div>
-    </section>
+    <div class="row">
+        <div v-for="(url,i) in images" :key="i" @click="getFullscreen(i)" class="col-sm-12 col-sm-12 col-md-6 col-lg-3"><img :id="i" :src="url"></div>
+    </div>
+  </section>
 
   </section>
 </template>
 
 <script lang="js">
 
-import  {Carousel3d, Slide} from 'vue-carousel-3d'
+//import  {Carousel3d, Slide} from 'vue-carousel-3d'
 
   export default  {
     name: 'src-components-photos',
     props: [],
     components:{
-      Carousel3d,
-      Slide
+      //Carousel3d,
+     //Slide
     },
     mounted () {
 
     },
     data () {
       return {
-
+        images: ['../assets/photo-1571397133301-3f838ea96f56.jpg',
+        '../assets/home1.png',
+        '../assets/patomini.png',
+        '../assets/introwallpaper.jpg']
       }
     },
     methods: {
-      getFullscreen(){
-        let element = document.getElementById("1")
+      getFullscreen(i){
+        let element = document.getElementById(i)
         if(element.requestFullscreen) {
             element.requestFullscreen();
           } else if(element.mozRequestFullScreen) {
@@ -91,7 +73,7 @@ import  {Carousel3d, Slide} from 'vue-carousel-3d'
           } else if(element.msRequestFullscreen) {
             element.msRequestFullscreen();
           }
-}
+      }
 
     },
     computed: {
@@ -99,17 +81,18 @@ import  {Carousel3d, Slide} from 'vue-carousel-3d'
     }
 }
 
-
 </script>
 
 <style scoped lang="css">
   .section-1{
-    padding: 10px;
+    padding: 12px;
+    margin: 0px;
     text-align: center;
   }
 
   .section-2{
-    padding: 10px;
+    padding: 12px;
+    margin: 0px;
     text-align: center;
   }
 
