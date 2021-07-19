@@ -162,7 +162,7 @@ section{
 
      @media screen and (max-width: 760px){
         .section-col-1{
-            background-image: url("../assets/home1copia.png");         
+            background-image: url("../assets/background-mini.png");         
             background-size: cover;
         }
     }

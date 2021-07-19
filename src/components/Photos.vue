@@ -1,77 +1,56 @@
 <template>
-  <section>
-<!--
-   <section class="section-1">
-      <Carousel3d>
-        <Slide :index="0">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide :index="1">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide :index="2">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide :index="3">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide :index="4">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide :index="5">
-          <img class="carousel-img" src="../assets/photo-1571397133301-3f838ea96f56.jpg">
-        </Slide>
-        <Slide v-for="(slide,i) in slides" :index="i" :key="i">
-          <template slot-scope="{index, isCurrent, leftIndex, rightIndex}">
-            <img class="carousel-img" :data-index="index" :class="{current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >=0) }" :src="slide.src">
-          </template>
-        </Slide>
-      </Carousel3d>
- </section>
- -->
-
- <section class="section-2">
-    <div class="row">
-        <div v-for="(url,i) in images" :key="i" @click="getFullscreen(i)" class="col-sm-12 col-sm-12 col-md-6 col-lg-3"><img :id="i" :src="url"></div>
-    </div>
-  </section>
-
+  <section class="section-1">
+   <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('1')" id="1" src="../assets/Photos/patodj2.png"></div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('2')" id="2" src="../assets/Photos/descarga.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('3')" id="3" src="../assets/Photos/Patobig.png"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('4')" id="4" src="../assets/Photos/introwallpaper.jpg"> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('5')" id="5" src="../assets/Photos/photo-1571397133301-3f838ea96f56.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('6')" id="6" src="../assets/Photos/descarga.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('7')" id="7" src="../assets/Photos/introwallpaper.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('8')" id="8" src="../assets/Photos/photo-1571397133301-3f838ea96f56.jpg"> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('9')" id="9" src="../assets/Photos/photo-1571397133301-3f838ea96f56.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('10')" id="10" src="../assets/Photos/introwallpaper.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('11')" id="11" src="../assets/Photos/patodj2.png"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('12')" id="12" src="../assets/Photos/Patobig.png"> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('13')" id="13" src="../assets/Photos/photo-1571397133301-3f838ea96f56.jpg"> </div>
+            <div class="col-sm-12 col-sm-12 col-md-6 col-lg-3"> <img @click="getFullscreen('14')" id="14" src="../assets/Photos/photo-1571397133301-3f838ea96f56.jpg"> </div>
+        </div> 
   </section>
 </template>
 
 <script lang="js">
 
-//import  {Carousel3d, Slide} from 'vue-carousel-3d'
-
   export default  {
     name: 'src-components-photos',
     props: [],
     components:{
-      //Carousel3d,
-     //Slide
+
     },
     mounted () {
 
     },
     data () {
       return {
-        images: ['../assets/photo-1571397133301-3f838ea96f56.jpg',
-        '../assets/home1.png',
-        '../assets/patomini.png',
-        '../assets/introwallpaper.jpg']
+        fullscrean: false
       }
     },
     methods: {
       getFullscreen(i){
-        let element = document.getElementById(i)
-        if(element.requestFullscreen) {
+        let element = document.getElementById(i) 
+        if(element.requestFullscreen && !this.fullscrean) {
+            this.fullscrean = !this.fullscrean
             element.requestFullscreen();
-          } else if(element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-          } else if(element.webkitRequestFullscreen) {
-            element.webkitRequestFullscreen();
-          } else if(element.msRequestFullscreen) {
-            element.msRequestFullscreen();
+        }
+          else{
+            this.fullscrean = !this.fullscrean
+            document.exitFullscreen();
           }
       }
 
@@ -90,28 +69,23 @@
     text-align: center;
   }
 
-  .section-2{
-    padding: 12px;
-    margin: 0px;
-    text-align: center;
-  }
-
-  .carousel-img{
-    width: 360px;
-    height: 270px;
-    cursor:pointer;
-  }
-
-  .section-2 img{
-    margin-top: 50px;
-    max-width:100%;
-    width:auto;
-    height: 250px;
+  .section-1 img{
+    margin-top: 40px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
     border-radius: 7px;
     cursor:pointer;
+    box-shadow: 5px 5px 22px 5px rgba(0,0,0,.6);
   }
 
-  img:hover{
-      box-shadow: 10px 0px 15px rgba(0,0,0,.6);
-    }
+  .section-1 img:hover{
+    box-shadow: 7px 7px 13px rgba(0,0,0,.6);
+  }
+
+  @media screen and (max-width: 760px){
+    .section-1 img{
+      box-shadow: 10px 2px 15px rgba(0,0,0,.6);
+  }
+}
 </style>
