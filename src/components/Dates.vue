@@ -7,17 +7,12 @@
             <br>
             <br>
             <ul id="section-1-ul">
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <li v-for="(date,i) in dates" :key="i">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg> Burger & Beer Joint – Mary Brickell Village (Miami) </li>
-                <li><i class="fas fa-chevron-right"></i> H & M (Saturday Fiesta) – Miami</li>
-                <li><i class="fas fa-chevron-right"></i> Kukla Art Salon – South Beach</li>
-                <li><i class="fas fa-chevron-right"></i> Sweet Liberty – South Beach</li>
-                <li><i class="fas fa-chevron-right"></i> Side Bar – Coral Gables</li>
-                <li><i class="fas fa-chevron-right"></i> The Globe – Coral Gables</li>
-                <li><i class="fas fa-chevron-right"></i> Victor Hotel – Miami Beach</li>
-                <li><i class="fas fa-chevron-right"></i> 420 Secret Location Miami (TBC)</li>
-                <li><i class="fas fa-chevron-right"></i> Mi Gente Lounge - San Sebastian, P.R.</li>
+                    </svg> 
+                    {{date}}
+                </li>
             </ul>
         </div>
     </section>
@@ -34,7 +29,17 @@
     },
     data () {
       return {
-
+          dates: [
+                'Burger & Beer Joint – Mary Brickell Village (Miami)',
+                'H & M (Saturday Fiesta) – Miami',
+                'Kukla Art Salon – South Beach',
+                'Sweet Liberty – South Beach',
+                'Side Bar – Coral Gables',
+                'The Globe – Coral Gables',
+                'Victor Hotel – Miami Beach',
+                '420 Secret Location Miami (TBC)',
+                'Mi Gente Lounge - San Sebastian, P.R.'
+            ]
       }
     },
     methods: {
