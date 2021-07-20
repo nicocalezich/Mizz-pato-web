@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-md navbar-light bg-light py-0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Mizz pato</a>
+        <router-link to="/home">
+          <a class="navbar-brand" href="#">Mizz pato</a>
+        </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span v-if="!navExpanded" @click="navExpanded = !navExpanded" class="navbar-toggler-icon"></span>
           <span v-else @click="navExpanded = !navExpanded"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">

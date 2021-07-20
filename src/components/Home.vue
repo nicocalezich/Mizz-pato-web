@@ -69,6 +69,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 *, *:before, *:after{
     margin: 0;
@@ -118,6 +119,7 @@ section{
     text-decoration: none;  
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-family: 'Comfortaa', cursive;
 }
 
 .mixcloud:hover{

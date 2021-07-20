@@ -80,12 +80,12 @@
   }
 
   .section-1 img:hover{
-    box-shadow: 7px 7px 13px rgba(0,0,0,.6);
+    box-shadow: 2px 2px 11px 2px rgba(0,0,0,.6);
   }
 
   @media screen and (max-width: 760px){
     .section-1 img{
-      box-shadow: 10px 2px 15px rgba(0,0,0,.6);
+     box-shadow: 2px 2px 11px 2px rgba(0,0,0,.6);
   }
 }
 </style>
