@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light py-0">
       <div class="container-fluid">
         <router-link to="/home">
-          <a class="navbar-brand" href="#">Mizz pato</a>
+          <a class="navbar-brand" href="#"><i>Mizz pato</i></a>
         </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span v-if="!navExpanded" @click="navExpanded = !navExpanded" class="navbar-toggler-icon"></span>
@@ -60,6 +60,7 @@
 <style scoped lang="css">
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 nav{
   box-shadow: 5px 0 10px rgba(0,0,0,.6);
@@ -75,8 +76,8 @@ nav a:hover{
 }
 
 .navbar-brand{
-    font-family: 'Caveat', cursive;
-    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
 }
 
 .navbar-toggler{

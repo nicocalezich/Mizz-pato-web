@@ -72,11 +72,12 @@
   .section-1 img{
     margin-top: 40px;
     max-width: 100%;
-    width: auto;
-    height: auto;
+    width: 350px;
+    height: 300px;
     border-radius: 7px;
     cursor:pointer;
     box-shadow: 5px 5px 22px 5px rgba(0,0,0,.6);
+    object-fit: cover;
   }
 
   .section-1 img:hover{

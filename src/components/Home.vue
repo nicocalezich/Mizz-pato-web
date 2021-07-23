@@ -28,7 +28,7 @@
    
      <section id="section-2" class="row">    
         <div id="section-2-col-1" class="col-sm-12 col-md-6">
-            <h1 id="section-2-col-1-title"><i>Where It All Started</i></h1>
+            <h1 id="section-2-col-1-title">Where It All Started</h1>
             <p id="section-2-col-1-description">Hailing from Buenos Aires, Argentina, DJ Mizz Pato first started opening for the local reggae bands and soon burst onto the underground hip hop scene.  For many years, she had her own radio show in Buenos Aires where she developed her sound to include more genres, mixes and crowd-pleasing beats.  Mizz Pato began her career in the U.S. working in NYC and Miami and performing with some of the biggest musical acts in the cities.  Now, she has reemerged on the South Florida music scene with her unique sound and style.  Mizz Pato is recognized as a true industry leader and innovator in her country, and she is loved around the world.</p>
         </div>
         <div id="section-2-col-2" class="col-sm-12 col-md-6">
@@ -87,14 +87,12 @@ section{
 .section-1{
     height: 700px;
     background-color: #F7F7F7;   
-    /*box-shadow: 10px 0px 15px rgba(0,0,0,.6);*/
-     background-image: url("../assets/home1.png") !important;   
+    background-image: url("../assets/home1.png") !important;   
 }
 
 .section-col-1{
     height: 100%;  
     text-align: center;
-   
 }
 
 .title{
@@ -119,7 +117,7 @@ section{
     text-decoration: none;  
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-family: 'Comfortaa', cursive;
+    
 }
 
 .mixcloud:hover{
@@ -194,12 +192,16 @@ section{
     #section-2-col-1-title{
         margin-top: 80px;    
         padding: 15px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 45px;
+
     }
 
     #section-2-col-1-description{
-        padding: 50px 60px;
+        padding: 30px 60px;
         line-height: 31px;
         font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     #section-2-col-2{
