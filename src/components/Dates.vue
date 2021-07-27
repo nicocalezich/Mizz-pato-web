@@ -99,8 +99,10 @@
 
     /* --- MINI ---*/
 
-    @media screen and (max-width: 858px){
-
+    @media screen and (max-width: 760px){
+        .section-1{
+            padding: 30px 15px;
+        }
      
     }
 
