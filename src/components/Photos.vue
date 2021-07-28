@@ -76,12 +76,14 @@
     height: 300px;
     border-radius: 7px;
     cursor:pointer;
-    box-shadow: 5px 5px 22px 5px rgba(0,0,0,.6);
+    box-shadow: 2px 2px 11px 2px rgba(0,0,0,.6);
     object-fit: cover;
+    transition: transform .2s;
   }
 
   .section-1 img:hover{
-    box-shadow: 2px 2px 11px 2px rgba(0,0,0,.6);
+    box-shadow: 5px 5px 22px 5px rgba(0,0,0,.6);
+    transform: scale(1.03);
   }
 
   @media screen and (max-width: 760px){

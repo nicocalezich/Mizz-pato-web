@@ -87,7 +87,7 @@ section{
 .section-1{
     height: 700px;
     background-color: #F7F7F7;   
-    background-image: url("../assets/home1.png") !important;   
+    background-image: url("../assets/color.png") !important;   
 }
 
 .section-col-1{
