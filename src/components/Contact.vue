@@ -60,6 +60,10 @@
         <div v-else>
           <Preloader/>
         </div>   
+        <div v-show="error" class="error mt-3">
+          <h3>Ups! An error occurred when sending the message</h3>
+          <h5>please, try again later</h5> 
+        </div>
            
       </vue-form>
     </div>
@@ -86,7 +90,7 @@ import Preloader from './Preloader.vue'
         formData: this.getInicialData(),
         formState: {},
         waitingResponse: false,
-        url: 'https://formspree.io/f/xvodwkjo',
+        url: 'https://formspree.io/f/asd', //xvodwkjo
         error: false
       }
     },
@@ -101,6 +105,7 @@ import Preloader from './Preloader.vue'
 
       send() {
         this.waitingResponse = true
+        this.error = false
 
         let data = {
           email: this.formData.email,
@@ -193,7 +198,6 @@ import Preloader from './Preloader.vue'
   button:hover{
     background: #e6aba5;
     transition: .4s;
-
   }
 
   .error{

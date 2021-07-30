@@ -62,7 +62,6 @@
     }
 
     .section-1{
-        position: absolute;
         width: 91%;
         height: 500px;
         background: #000000b9;
@@ -101,8 +100,19 @@
 
     @media screen and (max-width: 760px){
         .section-1{
-            padding: 30px 15px;
+            padding: 30px 5px;
+            height: 550px;
         }
+        .section-1 ul li{
+        padding: 5px 0;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        }
+        ul{
+            padding: 10px !important;
+        }
+
+
      
     }
 
