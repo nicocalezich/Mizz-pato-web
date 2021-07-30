@@ -43,14 +43,16 @@
     },
     methods: {
       getFullscreen(i){
-        let element = document.getElementById(i) 
+        let element = document.getElementById(i)    
         if(element.requestFullscreen && !this.fullscrean) {
             this.fullscrean = !this.fullscrean
             element.requestFullscreen();
+            element.style.objectFit = "none"
         }
-          else{
+          else{      
             this.fullscrean = !this.fullscrean
             document.exitFullscreen();
+            element.style.objectFit = "cover"
           }
       }
 
