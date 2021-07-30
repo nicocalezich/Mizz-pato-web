@@ -90,7 +90,7 @@ import Preloader from './Preloader.vue'
         formData: this.getInicialData(),
         formState: {},
         waitingResponse: false,
-        url: 'https://formspree.io/f/asd', //xvodwkjo
+        url: 'https://formspree.io/f/xvodwkjo', //xvodwkjo
         error: false
       }
     },
