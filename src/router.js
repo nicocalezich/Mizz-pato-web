@@ -5,6 +5,8 @@ import Dates from './components/Dates'
 import Photos from './components/Photos'
 import Videos from './components/Videos'
 import Contact from './components/Contact'
+import Success from './components/Success'
+
 
 Vue.use(VueRouter)
 export const router = new VueRouter({
@@ -16,5 +18,6 @@ export const router = new VueRouter({
         {path: "/photos", component: Photos},
         {path: "/videos", component: Videos},
         {path: "/contact", component: Contact},
+        {path: "/success", component: Success},
     ]
 })

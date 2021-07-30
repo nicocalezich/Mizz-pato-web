@@ -85,5 +85,24 @@ nav a:hover{
   outline: none !important;
   box-shadow: none !important;
 }
-  
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+@media screen and (max-width: 767px){
+    .nav-link::after {
+    display: none;    
+  }
+}
+
 </style>

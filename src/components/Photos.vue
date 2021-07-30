@@ -69,6 +69,8 @@
     padding: 12px;
     margin: 0px;
     text-align: center;
+    background: #f8ebea;
+
   }
 
   .section-1 img{
