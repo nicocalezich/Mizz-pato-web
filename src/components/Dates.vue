@@ -99,21 +99,44 @@
     /* --- MINI ---*/
 
     @media screen and (max-width: 760px){
+
+
         .section-1{
             padding: 30px 5px;
             height: 550px;
         }
+
         .section-1 ul li{
         padding: 5px 0;
         font-size: 17px;
         font-family: 'Montserrat', sans-serif;
         }
+
         ul{
             padding: 10px !important;
         }
 
+        .general{
+        background-image: url("../assets/dates-mini.jpg");
+        }
+    }
 
-     
+    @media screen and (max-width: 1080px){
+        .general{
+        background-image: url("../assets/dates-mini-2.jpg");
+        }
+    }
+
+    @media screen and (max-width: 1000px){
+        .general{
+        background-image: url("../assets/dates-mini-3.jpg");
+        }
+    }
+
+    @media screen and (max-width: 980px){
+        .general{
+        background-image: url("../assets/dates-mini.jpg");
+        }
     }
 
 </style>

@@ -1,7 +1,8 @@
 <template>
 
   <section class="src-components-videos">
-    <h1>src-components-videos Component</h1>
+    <h1>Nothing here yet!</h1>
+    <h3>We'll upload new videos soon.</h3>
   </section>
 
 </template>
@@ -32,6 +33,22 @@
 
 <style scoped lang="css">
   .src-components-videos {
-
+    height: 100vh;
+    background: #f8ebea;
+    text-align: center;
   }
+  
+  *{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+   .src-components-videos h1{
+     position: relative;
+     top: 75px;
+   }
+
+   .src-components-videos h3{
+     position: relative;
+     top: 85px;
+   }
 </style>
