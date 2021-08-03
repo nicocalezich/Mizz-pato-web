@@ -48,12 +48,9 @@
             </field-messages>
           </div>
         </validate>
-        <!-- btn ingresar -->
+        <!-- btn send -->
         <div v-if="!waitingResponse">
-          <button
-              type="submit"
-              :disabled="formState.$invalid" 
-          >
+          <button type="submit" :disabled="formState.$invalid">
             Send
           </button>
         </div> 
@@ -208,6 +205,7 @@ import Preloader from './Preloader.vue'
     color: crimson;
     font-weight: 700;
   }
+
 
 
   /*responsive*/

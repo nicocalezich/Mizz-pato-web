@@ -23,12 +23,13 @@
 
 <style scoped lang="css">
   .src-components-preloader {
-    text-align: center;
+     margin: 0 auto;
   }
   .lds-ring {
     display: inline-block;
     position: relative;
     padding: 30px;
+    transform: translate(-50%, -50%);
   }
   .lds-ring div {
     box-sizing: border-box;
