@@ -32,7 +32,7 @@
             <p id="section-2-col-1-description">Hailing from Buenos Aires, Argentina, DJ Mizz Pato first started opening for the local reggae bands and soon burst onto the underground hip hop scene.  For many years, she had her own radio show in Buenos Aires where she developed her sound to include more genres, mixes and crowd-pleasing beats.  Mizz Pato began her career in the U.S. working in NYC and Miami and performing with some of the biggest musical acts in the cities.  Now, she has reemerged on the South Florida music scene with her unique sound and style.  Mizz Pato is recognized as a true industry leader and innovator in her country, and she is loved around the world.</p>
         </div>
         <div id="section-2-col-2" class="col-sm-12 col-md-6">
-            <img id="section-2-col-2-img" src="../assets/home2.png" alt="home_img">
+            <img id="section-2-col-2-img" src="../assets/Home/home2.png" alt="home_img">
         </div>
     </section>
    </section>
@@ -87,7 +87,7 @@ section{
 .section-1{
     height: 700px;
     background-color: #F7F7F7;   
-    background-image: url("../assets/color.png") !important;   
+    background-image: url("../assets/Home/color.png") !important;   
 }
 
 .section-col-1{
@@ -137,7 +137,7 @@ section{
 }
 
 .section-col-2{
-    background-image: url("../assets/Patobig.png");         
+    background-image: url("../assets/Home/Patobig.png");         
     background-size: cover;
 }
 
@@ -162,7 +162,7 @@ section{
 
      @media screen and (max-width: 760px){
         .section-col-1{
-            background-image: url("../assets/background-mini.png");         
+            background-image: url("../assets/Home/background-mini.png");         
             background-size: cover;
         }
     }
@@ -178,6 +178,7 @@ section{
     #section-2{
         text-align: center;
         background-color: #fcd6d1;   
+        padding: 10px;
     }
 
     #section-2-col-1{   

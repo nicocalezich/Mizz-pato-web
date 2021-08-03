@@ -4,7 +4,7 @@
             <h1>Message delivered successfully!</h1>
             <h3>I'll get in touch soon</h3>
             <router-link to="/home" class="link">Go to home</router-link> 
-            <img src="../assets/check.png" width="100" height="100" alt="">
+            <img src="../assets/Contact/check.png" width="100" height="100" alt="">
            
         </div>
     </section>

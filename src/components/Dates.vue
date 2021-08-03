@@ -57,7 +57,7 @@
         margin: 0;
         width: 100%;
         height: 100vh;
-        background-image: url("../assets/dates-wp.jpg");
+        background-image: url("../assets/Dates/dates-wp.jpg");
         background-size: cover;
     }
 
@@ -117,25 +117,25 @@
         }
 
         .general{
-        background-image: url("../assets/dates-mini.jpg");
+        background-image: url("../assets/Dates/dates-mini.jpg");
         }
     }
 
     @media screen and (max-width: 1080px){
         .general{
-        background-image: url("../assets/dates-mini-2.jpg");
+        background-image: url("../assets/Dates/dates-mini-2.jpg");
         }
     }
 
     @media screen and (max-width: 1000px){
         .general{
-        background-image: url("../assets/dates-mini-3.jpg");
+        background-image: url("../assets/Dates/dates-mini-3.jpg");
         }
     }
 
     @media screen and (max-width: 980px){
         .general{
-        background-image: url("../assets/dates-mini.jpg");
+        background-image: url("../assets/Dates/dates-mini.jpg");
         }
     }
 
