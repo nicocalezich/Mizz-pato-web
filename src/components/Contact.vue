@@ -92,7 +92,6 @@ import Preloader from './Preloader.vue'
       }
     },
     methods: {
-
       getInicialData() {
         return {
           email: '',
@@ -102,15 +101,12 @@ import Preloader from './Preloader.vue'
 
       send() {
         this.waitingResponse = true
-        this.error = false
-
+        if(this.error){this.error = false} 
         let data = {
           email: this.formData.email,
           message: this.formData.message
         }
-
         let raw = JSON.stringify(data)
-
         let requestOptions = {
           method: 'POST',
           headers: {
